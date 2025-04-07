@@ -1,0 +1,109 @@
+#Omni-Tool Configuration
+
+#Currency is used to upgrade the pickaxe
+#If use-token is enabled, use-money must be false, and else
+currency-setting:
+  #Token: Currency of this plugin
+  use-token: true
+  #Money: Currency of Vault
+  use-money: false
+
+omnitool-settings:
+  max-level: 100
+  base-xp-cost: 10
+  increase-cost-expression: 'baseCost + currentLevel * baseCost * 0.2'
+
+item-format:
+  material: 'DIAMOND_PICKAXE'
+  name: '&c&lOmnitool'
+  lore:
+    - ''
+    - '&e&l| Info:'
+    - ' &7Level: &f%level%'
+    - ' &7Xp: &f%xp_gained% &7/ &f%xp_needed%'
+    - ' &7Progress: &f%level_progress%%'
+    - ' &7Broken blocks: &f%broken_block%'
+    - ' &7Claimed by &f%player%'
+    - ''
+    - '&e&l| Enchantments:'
+    - ' &7Efficiency &f%efficiency_level%'
+    - ' &7Fortune &f%fortune_level%'
+    - ' &7Explosive &f%explosive_level%'
+    - ' &7Merchant &f%merchant_level%'
+  unbreakable: true
+
+enchants:
+  1:
+    rawName: 'efficiency'
+    displayName: 'Efficiency'
+    cost: 3
+    increase-cost-by: 50
+    max-level: 1000
+    enabled: true
+  2:
+    rawName: 'fortune'
+    displayName: 'Fortune'
+    cost: 5
+    increase-cost-by: 50
+    max-level: 1000
+    enabled: true
+  3:
+    rawName: 'explosive'
+    displayName: 'Explosive'
+    cost: 10
+    increase-cost-by: 50
+    max-level: 5000
+    trigger-percentage:
+      base: 0.001
+      increase-per-level: 0.001
+    enabled: true
+  4:
+    rawName: 'jackhammer'
+    displayName: 'Jackhammer'
+    cost: 10
+    increase-cost-by: 50
+    max-level: 5000
+    enabled: true
+  5:
+    rawName: 'tokenminer'
+    displayName: 'Token Miner'
+    cost: 10
+    increase-cost-by: 50
+    max-level: 5000
+    enabled: true
+  6:
+    rawName: 'merchant'
+    displayName: 'Merchant'
+    cost: 10
+    increase-cost-by: 50
+    max-level: 5000
+    trigger-percentage:
+      base: 0.001
+      increase-per-level: 0.001
+    #example: base sell multiplier is 1.0, it will be 1.0 + <increase-sell-multiplier> if this enchant is triggered.
+    increase-sell-multiplier: 0.2
+    enabled: true
+
+messages:
+  help:
+    helpAdmin:
+      - '&c&l(!) PrisonCore - Admin Omnitool Help (!)'
+      - ' &c&l* &7/omnitool help - Show this help list'
+      - ' &c&l* &7/omnitool give <player> - Give player an omnitool'
+      - ' &c&l* &7/omnitool addenchant <enchant> <level> - Enchant and upgrade player omnitool'
+      - ' &c&l* &7/ench or right click your omnitool - Upgrade your omnitool'
+    helpPlayer:
+      - '&c&l(!) Omnitool Help (!)'
+      - ' &c&l* &7/omnitool help - Show this help list'
+      - ' &c&l* &7/ench or right click your omnitool - Upgrade your omnitool'
+  usage: '&c&l(!) &cUsage: %usage%'
+  noPermission: '&c&l(!) &cYou don''t have permission to do that!'
+  give: '&a&l(!) &aYou have successfully given %player% an omnitool!'
+  targetGive: '&a&l(!) &aYou have received an omnitool!'
+  targetNotFound: '&c&l(!) &cPlayer not found!'
+  notHold: '&c&l(!) &cYou don''t hold an omnitool in your hand!'
+  invalidNumber: '&c&l(!) &cInvalid number!'
+  invalidEnchant: '&c&l(!) &cInvalid enchant!'
+  onlyPlayer: '&c&l(!) &cOnly player in game can do that!'
+  enchMaxLevel: '&c&l(!) &cThis enchant reached to max level!'
+  merchantTrigger: '&7You have received &2$&a%money%&7 from &e&lMerchant'

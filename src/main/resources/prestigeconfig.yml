@@ -1,0 +1,58 @@
+#Prestige configuration
+
+settings:
+  max-prestige: 10
+  display: '&8[&a%prestige%&8]'
+  base-cost: 100000
+  increase-cost-expression: 'baseCost + currentPrestige * baseCost * 0.2'
+  execute-cmds:
+    - '[CONSOLE]:lp user %player% parent set A'
+    - '[CONSOLE]:rank set %player% A'
+    - '[CONSOLE]:eco reset %player%'
+
+messages:
+  help:
+    helpAdmin:
+      - '&c&l(!) PrisonCore - Admin Prestige Help (!)'
+      - ' &c&l* &7/prestige - Return to the first rank and receive special prizes'
+      - ' &c&l* &7/prestige help - Show this help list'
+      - ' &c&l* &7/prestige add <player> <value> - Add prestiges to player''s account'
+      - ' &c&l* &7/prestige remove <player> <value> - Remove prestiges from player''s account'
+      - ' &c&l* &7/prestige set <player> <value> - Set player''s prestige'
+      - ' &c&l* &7/prestige top - Show top player prestige'
+    helpPlayer:
+      - '&c&l(!) Prestige Help (!)'
+      - ' &c&l* &7/prestige - Return to the first rank and receive special prizes'
+      - ' &c&l* &7/prestige help - Show this help list'
+      - ' &c&l* &7/prestige top - Show top player prestige'
+  usage: '&c&l(!) &cUsage: %usage%'
+  noPermission: '&c&l(!) &cYou don''t have permission to do that!'
+  prestige: '&a&l(!) &aYou have successfully reached to prestige %prestige%'
+  notInTheLastRank: '&c&l(!) &cYou need reaching to the last rank to prestige!'
+  lastPrestige: '&c&l(!) &cYou are in the last prestige!'
+  notEnoughMoney: '&c&l(!) &cYou do not have enough money for prestige! Next prestige: %cost%'
+  targetNotFound: '&c&l(!) &cPlayer not found!'
+  invalidInput: '&c&l(!) &cInvalid value!'
+  setPrestige: '&a&l(!) &aYou have successfully set %player%''s prestige to %prestige%'
+  targetSetPrestige: '&a&l(!) &aYour prestige has successfully been set to %prestige%'
+  addPrestige: '&a&l(!) &aYou have successfully added %prestige% prestige to %player%''s account. New prestige: %new_prestige%'
+  targetAddPrestige: '&a&l(!) &aYour account has been added %prestige% prestige. New prestige: %new_prestige%'
+  removePrestige: '&a&l(!) &aYou have successfully removed %prestige% prestige from %player%''s account. New prestige: %new_prestige%'
+  targetRemovePrestige: '&c&l(!) &cYour account has been removed %prestige% prestige. New prestige: %new_prestige%'
+  invalidPrestige: '&c&l(!) &cInvalid prestige! Player''s prestige must be in the range [0; %max_prestige%]'
+  leaderboard:
+    header:
+      - '&c&l(!) Prestige Top (!)'
+    body:
+      - ' &c&l#1 &f%player-top1% &7- &f%prestige-top1%'
+      - ' &c&l#2 &f%player-top2% &7- &f%prestige-top2%'
+      - ' &c&l#3 &f%player-top3% &7- &f%prestige-top3%'
+      - ' &c&l#4 &f%player-top4% &7- &f%prestige-top4%'
+      - ' &c&l#5 &f%player-top5% &7- &f%prestige-top5%'
+      - ' &c&l#6 &f%player-top6% &7- &f%prestige-top6%'
+      - ' &c&l#7 &f%player-top7% &7- &f%prestige-top7%'
+      - ' &c&l#8 &f%player-top8% &7- &f%prestige-top8%'
+      - ' &c&l#9 &f%player-top9% &7- &f%prestige-top9%'
+      - ' &c&l#10 &f%player-top10% &7- &f%prestige-top10%'
+    footer:
+      - '&7&o(( Coin Race: &f&odd/mm/yyyy &7&o-> &f&odd/mm/yyyy &7&o))'

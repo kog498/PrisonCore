@@ -1,0 +1,65 @@
+#Token Configuration
+
+messages:
+  help:
+    helpAdmin:
+      - '&c&l(!) PrisonCore - Admin Token Help (!)'
+      - ' &c&l* &7/token help - Show this help list'
+      - ' &c&l* &7/token balance [player] - Show your balance or player''s balance'
+      - ' &c&l* &7/token add <player> <amount> - Add tokens to player''s account'
+      - ' &c&l* &7/token remove <player> <amount> - Remove tokens from player''s account'
+      - ' &c&l* &7/token set <player> <amount> - Set player''s balance'
+      - ' &c&l* &7/token withdraw <amount> - Change tokens in your account to physical tokens'
+      - ' &c&l* &7/token top - Show top player token'
+    helpPlayer:
+      - '&c&l(!) Token Help (!)'
+      - ' &c&l* &7/token help - Show this help list'
+      - ' &c&l* &7/token balance [player] - Show your balance or player''s balance'
+      - ' &c&l* &7/token withdraw <amount> - Change tokens in your account to physical tokens'
+      - ' &c&l* &7/token top - Show top player token'
+  usage: '&c&l(!) &cUsage: %usage%'
+  noPermission: '&c&l(!) &cYou don''t have permission to do that!'
+  targetNotFound: '&c&l(!) &cPlayer not found!'
+  onlyPlayer: '&c&l(!) Only player can run this command!'
+  invalidNumber: '&c&l(!) &cInvalid number!'
+  balance: '&a&l(!) &aYour balance: %token% tokens.'
+  otherBalance: '&a&l(!) &a%player% has %token% tokens.'
+  addToken: '&a&l(!) &aYou have successfully added %token% tokens to %player%''s account. New balance: %new_balance%.'
+  targetAddToken: '&a&l(!) &aYour account has been added %token% tokens. New balance: %new_balance%.'
+  removeToken: '&a&l(!) &aYou have successfully removed %token% tokens from %player%''s account. New balance: %new_balance%.'
+  targetRemoveToken: '&c&l(!) &cYour account has been removed %token% tokens. New balance: %new_balance%.'
+  setToken: '&a&l(!) &aYou have successfully set %player%''s balance to %token% tokens.'
+  targetSetToken: '&e&l(!) &eYour balance has been set to %token% tokens.'
+  notEnoughToken: '&c&l(!) &cYou don''t have enough tokens to do that!'
+  withdrawToken: '&a&l(!) &aYou have successfully withdrawn %token% tokens. New balance: %new_balance%.'
+  redeemToken: '&a&l(!) &aYou have redeemed %token% tokens. New balance: %new_balance%.'
+  leaderboard:
+    header:
+      - '&8&l&m======================================'
+      - ''
+      - '&8[&e&l!&8] &ePrestige Top List:'
+      - ''
+    body:
+      - ' &6#1 &f%player-top1% &7- &f%token-top1%'
+      - ' &6#2 &f%player-top2% &7- &f%token-top2%'
+      - ' &6#3 &f%player-top3% &7- &f%token-top3%'
+      - ' &6#4 &f%player-top4% &7- &f%token-top4%'
+      - ' &6#5 &f%player-top5% &7- &f%token-top5%'
+      - ' &6#6 &f%player-top6% &7- &f%token-top6%'
+      - ' &6#7 &f%player-top7% &7- &f%token-top7%'
+      - ' &6#8 &f%player-top8% &7- &f%token-top8%'
+      - ' &6#9 &f%player-top9% &7- &f%token-top9%'
+      - ' &6#10 &f%player-top10% &7- &f%token-top10%'
+    footer:
+      - ''
+      - '&7&o(( Coin Race: &f&odd/mm/yyyy &7&o-> &f&odd/mm/yyyy &7&o))'
+      - ''
+      - '&8&l&m======================================'
+
+token-item:
+  material: 'MAGMA_CREAM'
+  name: '&e&lToken Item &7&o(Click to redeem)'
+  lore:
+    - '&7This is a physical token'
+    - '&7Withdrawn by: &f%player%'
+    - '&7Amount: &b%amount%'

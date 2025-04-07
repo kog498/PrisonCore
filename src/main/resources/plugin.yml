@@ -1,0 +1,41 @@
+name: PrisonCore
+version: '${project.version}'
+main: me.justfu498.prisoncore.PrisonCore
+authors: [ justfu498 ]
+depend: [ Vault ]
+softdepend: ["PlaceholderAPI"]
+description: This plugin is suitable for prison servers
+commands:
+  prisoncore:
+    description: PrisonCore commands
+    usage: /<command>
+  rank:
+    description: Rank commands
+    usage: /<command>
+  rankup:
+    description: Level up command
+    usage: /<command>
+  ranklist:
+    description: Show rank list
+    usage: /<command>
+  forcerankup:
+    description: Force player to rank up
+    usage: /<command>
+  prestige:
+    description: Prestige commands
+    usage: /<command>
+  sellall:
+    description: Sell all items in the inventory
+    usage: /<command>
+  token:
+    description: Token commands
+    usage: /<command>
+  omnitool:
+    description: Omnitool commands
+    usage: /<command>
+  autosell:
+    description: Autosell commands
+    usage: /<command>
+  mine:
+    description: Mine commands
+    usage: /<command>

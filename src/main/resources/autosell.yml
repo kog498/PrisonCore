@@ -1,0 +1,74 @@
+#Autosell Configuration
+
+messages:
+  help:
+    helpAdmin:
+      - '&c&l(!) PrisonCore - Admin Autosell Help (!)'
+      - ' &c&l* &7/autosell setsign <shop> - Set a sign to sell all when clicking to it'
+      - ' &c&l* &7/autosell delsign <shop> - Delete a sellall sign'
+      - ' &c&l* &7/autosell setmulti <player> <multiplier> - Set player''s sell multiplier'
+      - ' &c&l* &7/autosell addmulti <player> <multiplier> - Add sell multiplier to player account'
+      - ' &c&l* &7/autosell delmulti <player> <multiplier> - Remove sell multiplier from player account'
+      - ' &c&l* &7/autosell setbooster <player> <multiplier> <duration> - Give player a sell multiplier booster'
+      - ' &c&l* &7/autosell delbooster <player> - Remove player''s sell multiplier booster'
+      - ' &c&l* &7/sellall <shop> - Sell all items in your inventory'
+      - ' &c&l* &7/autosell - Toggle automatic sellall mode'
+    helpPlayer:
+      - '&c&l(!) Autosell Help (!)'
+      - ' &c&l* &7/sellall <shop> - Sell all items in your inventory'
+      - ' &c&l* &7/autosell - Toggle automatic sellall mode'
+  sellall:
+    - '&8&l&m======================================'
+    - ''
+    - '&8[&e&l!&8] &eYou have successfully sold your items!'
+    - ''
+    - '  &8&l* &7Shop: &8[&a&n%shop%&8]'
+    - ''
+    - '  &8&l* &7Item Sold:'
+    - '%items%'
+    - ''
+    - '  &8&l* &7Received: &2$&a%money_received%'
+    - '  &8&l* &7Sell Multiplier: &d%multiplier%x'
+    - ''
+    - '  &8&l* &7Total: &2$&a%total_money%'
+    - ''
+    - '&8&l&m======================================'
+  formatItemInList: '      &e%item% &8- &fx%amount%'
+  usage: '&c&l(!) &cUsage: %usage%'
+  noPermission: '&c&l(!) &cYou do not have permission to do that!'
+  notAvailableShop: '&c&l(!) &cThis shop is not available!'
+  nothingToSell: '&c&l(!) &cYou do not have any items to sell!'
+  noPermToSell: '&c&l(!) &cYou do not have permission to sell for this shop!'
+  targetNotFound: '&c&l(!) &cPlayer not found!'
+  invalidNumber: '&c&l(!) &cInvalid number!'
+  setMulti: '&a&l(!) &aYou have successfully set %player%''s sell multiplier to %multiplier%'
+  targetSetMulti: '&a&l(!) &aYour sell multiplier has been set to %multiplier%'
+  addMulti: '&a&l(!) &aYou have successfully added %multiplier% sell multiplier to %target%''s account. New multiplier: %new_multiplier%'
+  targetAddMulti: '&a&l(!) &aYour account has been added %multiplier% sell multiplier. New multiplier: %new_multiplier%'
+  invalidMulti: '&c&l(!) &cPlayer''s sell multiplier cannot be under 1.0x. Current multiplier of this player: %multiplier%'
+  delMulti: '&a&l(!) &aYou have successfully removed %multiplier% sell multiplier from %target%''s account. New multiplier: %new_multiplier%'
+  targetDelMulti: '&c&l(!) &cYour account has been removed %multiplier% sell multiplier. New multiplier: %new_multiplier%'
+  boosterSellall: '&7You have received &2$&a%money%&7 from &e&lSell Booster %multiplier%x'
+  setBooster: '&a&l(!) &aYou have successfully activated a Sell Booster %multiplier%x in %duration% for %player%'
+  targetSetBooster: '&a&l(!) &aSell Booster %multiplier% in %duration% has been activated for you'
+  notHaveBooster: '&c&l(!) &c%player% don''t have any sell boosters!'
+  delBooster: '&a&l(!) &aYou have successfully removed %player%''s sell booster!'
+  targetDelBooster: '&c&l(!) &cYour sell booster has been removed!'
+
+fortune-block:
+  multiplier: 1.2
+  blacklist-worlds:
+    - 'someWorlds'
+    - 'blackWorlds'
+  #Blocks in below list will picked up and received more when player breaks block.
+  blocks:
+    - 'STONE'
+    - 'COBBLESTONE'
+
+shops:
+  1:
+    name: 'A'
+    display: '&8[&a&lA&8]'
+    items:
+      - 'COBBLESTONE;1.0'
+      - 'STONE;2.0'

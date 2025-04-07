@@ -1,0 +1,54 @@
+#Rank configuration
+
+messages:
+  help:
+    helpAdmin:
+      - '&c&l(!) PrisonCore - Admin Rank Help (!)'
+      - ' &c&l* &7/rank help - Show this help list'
+      - ' &c&l* &7/rank set <player> <rank> - Set player''s rank'
+      - ' &c&l* &7/rank reset <player> - Set player''s rank to the first rank'
+      - ' &c&l* &7/forcerankup <player> - Force player to rank up'
+      - ' &c&l* &7/rankup - Level up if you have enough money'
+      - ' &c&l* &7/ranklist - Show rank system'
+    helpPlayer:
+      - '&c&l(!) Rank Help (!)'
+      - ' &c&l* &7/rank help - Show this help list'
+      - ' &c&l* &7/rankup - Level up if you have enough money'
+      - ' &c&l* &7/ranklist - Show rank system'
+  rankList:
+    - '&c&l(!) Rank List (!)'
+    - ''
+    - '%ranks%'
+    - ''
+    - '&7Type &c/ranklist %page%&7 to get more!'
+  formatRankInList: '&8[&a%rank%&8] &7-> &8[&a%next_rank%&8]: &2$&a%cost%'
+  usage: '&c&l(!) &cUsage: %usage%'
+  noPermission: '&c&l(!) &cYou don''t have permission to do that!'
+  rankup: '&a&l(!) &aYou ranked up to %next_rank%'
+  forceRankup: '&a&l(!) &aYou forced %player% to rank up! Current rank: %rank%'
+  targetForceRankup: '&a&l(!) &aYou were forced to rank up! Current rank: %rank%'
+  notEnoughMoney: '&c&l(!) &cYou do not have enough money to rank up! Next rank: %cost%'
+  lastRank: '&c&l(!) &cYou reached to the last rank!'
+  lastRankInForce: '&c&l(!) &cThis player is at the last rank!'
+  targetNotFound: '&c&l(!) &cPlayer not found!'
+  rankNotAvailable: '&c&l(!) &cRank not available!'
+  setRank: '&a&l(!) &aYou have set %player%''s rank to %rank%'
+  targetSetRank: '&a&l(!) &aYour rank has set to %rank%'
+  invalidNumber: '&c&l(!) &cInvalid number!'
+  noMoreRanks: '&c&l(!) &cNo more ranks to show!'
+
+ranks:
+  1:
+    name: 'A'
+    display: '&8[&a&lA&8]'
+    cost: 0
+    execute-cmds:
+      - '[CONSOLE]:lp user %player% parent set B'
+      - '[CONSOLE]:warp B %player%'
+  2:
+    name: 'B'
+    display: '&8[&a&lB&8]'
+    cost: 1000
+    #At the last rank, execute-cmds can be empty because they never run.
+    execute-cmds:
+      - ''

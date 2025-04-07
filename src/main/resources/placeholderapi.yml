@@ -1,0 +1,33 @@
+#PlaceholderAPI Configuration
+
+rank-prestige:
+  #Rankup progress bar only shows player's rank progress.
+  #If player reaches to the last rank, it will show <last-rank>.
+  rankup-progress-bar:
+    progress-symbol: ':'
+    progress-filled: '&a'
+    progress-needed: '&c'
+    progress-full: '&e/rankup'
+    last-rank: '&d/prestige'
+  #Total progress bar shows both in player's rank progress and prestige progress.
+  #If player reaches to the last rank, it will continue to show prestige progress.
+  #If player reaches to the last prestige, it will show <last-prestige>.
+  total-progress-bar:
+    progress-symbol: ':'
+    progress-filled: '&a'
+    progress-needed: '&c'
+    rankup-progress-full: '&e/rankup'
+    prestige-progress-full: '&d/prestige'
+    last-prestige: '&cLast Prestige'
+  #For example, if you use %prisoncore_nextrank% or %prisoncore_nextrank_display%, it will show as below.
+  next-rank-at-last-rank: '&8[&aN/A&8]'
+  #For example, if you use %prisoncore_nextprestige% or %prisoncore_nextprestige_display%, it will show as below.
+  next-prestige-at-last-prestige: '&8[&aN/A&8]'
+  #For example, if you use %prisoncore_nextrank_cost%, it will show as below.
+  cost-at-last-rank: 'N/A'
+  #For example, if you use %prisoncore_nextprestige_cost%, it will show as below.
+  cost-at-last-prestige: 'N/A'
+
+autosell:
+  player-not-have-booster: 'None'
+  duration-not-have-booster: 'N/A'
